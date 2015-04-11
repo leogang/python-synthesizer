@@ -18,18 +18,16 @@ function to create a waveform.
 
 4 commonds
 
-init  songtitle, tempo 
-def --sets up instruments
-play -plays a note (4 of these) 
-res -- plays a rest on (channel, length) 
-vol - changes the volume of a channel(4 of these)
+INI - songtitle, tempo 
+DEF - sets up instruments
+PLY - plays a note (4 of these) 
+RES - plays a rest on (channel, length) 
+VOL - changes the volume of a channel(4 of these)
 
 
-ply will have channel,instrument, note, length   OF NOTE: Rests are simply of freqency 0.
+PLY: will have channel, instrument, note, length   OF NOTE: Rests are simply of freqency 0.
 
-vol -- 
-
-volume--each channel should have an amplitude setting? 
+VOL: each channel should have an amplitude setting? 
 
 additive synthesis to create sounds with the right blend of harmonics. 
 '''
@@ -165,7 +163,7 @@ class CMIS(object):
                 temp += float(instr[x])*(math.sin(angle*y)+math.cos(angle*y))
             temp *= self.vols[chan]
             note.append(temp)
-		return note
+	return note
         
     
     #takes self, channel number and note to add
